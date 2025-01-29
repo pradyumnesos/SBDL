@@ -25,15 +25,15 @@ pipeline {
 	      branch 'release'
 	   }
            steps {
-              sh "echo 'you made a change in the release branch'"
+              echo 'you made a change in the release branch'
            }
         }
 	stage('Deploy') {
 	   when{
-	      branch 'master'
+	      branch 'main'
 	   }
            steps {
-               sh "echo 'you made a change in the deploy branch'"
+              echo 'you made a change in the deploy branch'
            }
         }
     }
